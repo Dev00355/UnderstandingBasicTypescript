@@ -1,0 +1,28 @@
+1.  Javascript has primitive types starting with capital letters e.g: String, Number, Boolean 
+  in Typescript primitive type starts in lower characters e.g: string, number and Boolean
+  String is wrapper class in typescript (you can think same as in java) and same as with Number and Boolean
+
+  let a1 = "Hello World"; 
+let b1 = "Hello World"; 
+console.log(a1 != b1); --> comparing both primitive types hence both are same
+let a2 = new String("Hello World"); 
+let b2 = new String("Hello World"); 
+console.log(a2 != b2); --> comparing 2 objects, will never be the same hence result is true
+
+output: flase 
+        true 
+
+2. in Typescript its always best to assign the type like function add(n1: number, n2: number)
+ there could be some situation where you dont know what would come as paramter then you can use 
+ "any" keyword --> function add(n1:any, n2: any)- but here we loose a charm of typescript 
+ so what to do in such situations , if you know that there can be number of string or boolean 
+ in that case we can use union operator '|' e.g: function add(n1: number | string | boolean)
+
+3. "Never" retrun type in Typescript --> few utility functions like , generateError throws an exceptions
+  it never return anything , if you put void then it would work .. but actually its never
+  function(message: string, errCode: number): void{
+    throw('Nothing happened', 500)
+  }
+  function(message: string, errCode: number): never{
+    throw('Nothing happened', 500)
+  }
