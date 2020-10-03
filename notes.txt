@@ -40,3 +40,8 @@ Generate tsconfig.json file through command "tsc --init"
 6. Source Map option in tsconfig file generates map file (e.g: app.ts, app.js app.js.map) so that
    advanced browser's developer tool ( like chrome), shows the ts files also in browser
    and we can debug it as well, it would be great help to debug the bugs
+
+7. "noEmit" option in tsconfig.json file, when we dont want to generate the js file, just 
+    want to check the syntax(during development mostly)
+    "noEmitOnError" --> comipler will not generate javascript file if there is any compile time error 
+    if not set then it will generate the js file (default is "false")
