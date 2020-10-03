@@ -19,7 +19,12 @@
 // const AUTHOR = 2;
 
 enum Role { ADMIN = 'ADMIN', READ_ONLY = 100, AUTHOR = 'AUTHOR' };
+//  enum Role1{
+//   admin = 1,
+//   worker =2
+// };
 
+// console.log(Role1.admin);
 const person = {
   name: 'Maximilian',
   age: 30,

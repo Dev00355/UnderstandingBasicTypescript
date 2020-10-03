@@ -26,3 +26,17 @@ output: flase
   function(message: string, errCode: number): never{
     throw('Nothing happened', 500)
   }
+=======================================================================================
+Generate tsconfig.json file through command "tsc --init"
+========================================================================================
+4. we can exclude few files to get compiled, to do that we can add "exclude" in tsconfig.json files
+   files under node_module are by default excluded , else it may slowdown the compilation
+   similary we have "include" if we want to include only specific files then we can do that 
+   and one more option is "file" instead of entire folder just a file
+
+5. let and const keywords were introduced in es6, in tsconfig.json target is mentioned as es5
+   hence generated js files will not have let and const keywords, 
+
+6. Source Map option in tsconfig file generates map file (e.g: app.ts, app.js app.js.map) so that
+   advanced browser's developer tool ( like chrome), shows the ts files also in browser
+   and we can debug it as well, it would be great help to debug the bugs
